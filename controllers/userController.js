@@ -155,7 +155,7 @@ async function sendMail(email,reset_token){
         from: 'shubhamfarainzi@gmail.com', // sender address
         to: email, // list of receivers
         subject: "Password reset request", // Subject line
-        text: `Please click the link below to choose a new password: \n http://localhost:8080/users/forgetPassword/${reset_token}`
+        text: `Please click the link below to choose a new password: \n https://twitter-ds6j.onrender.com/users/forgetPassword/${reset_token}`
       
       });
     
