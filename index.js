@@ -15,6 +15,8 @@ const postRouter = require('./routes/postRoutes')
 const messageRouter = require('./routes/message')
 
 
+app.use(cors())
+
 let user = new Map();
 
 function addUser(userId, socketId) {
@@ -61,7 +63,7 @@ io.on("connection", (socket) => {
 
 
 app.set('view engine', 'ejs')
-app.use(cors())
+
 app.use(express.json({ limit: "200mb" })) //middle ware
 app.get('/', (req, res) => {
     res.send('welcome page')
